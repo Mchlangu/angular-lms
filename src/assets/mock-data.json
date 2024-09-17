@@ -1,0 +1,322 @@
+{
+  "courses": [
+    {
+      "name": "Angular Fundamentals",
+      "imageUrl": "assets/images/angularf.jpg",
+      "topics": [
+        {
+          "name": "Introduction to Angular",
+          "questions": [
+            {
+              "question": "What is Angular?",
+              "options": [
+                { "label": "A", "text": "A front-end JavaScript framework" },
+                { "label": "B", "text": "A back-end framework for Node.js" },
+                { "label": "C", "text": "A CSS framework for styling applications" },
+                { "label": "D", "text": "A library for building mobile apps" }
+                ],
+              "correctOption": "A"
+            },
+            {
+              "question": "Which of the following is used for two-way data binding in Angular?",
+              "options": [
+                { "label": "A", "text": "ngFor" },
+                { "label": "B", "text": "ngModel" },
+                { "label": "C", "text": "ngIf" },
+                { "label": "D", "text": "ngClass" }
+              ],
+              "correctOption": "B"
+            }
+          ]
+        },
+        {
+          "name": "Angular Components",
+          "questions": [
+            {
+              "question": "What is the purpose of an Angular component?",
+              "options": [
+                { "label": "A", "text": "To define routes in an Angular application" },
+                { "label": "B", "text": "To encapsulate the logic and template for a part of the UI" },
+                { "label": "C", "text": "To handle HTTP requests" },
+                { "label": "D", "text": "To manage the state of the application" }
+              ],
+              "correctOption": "B"
+            },
+            {
+              "question": "Which decorator is used to define a component?",
+              "options": [
+                { "label": "A", "text": "@Directive" },
+                { "label": "B", "text": "@Service" },
+                { "label": "C", "text": "@NgModule" },
+                { "label": "D", "text": "@Component" }
+              ],
+              "correctOption": "D"
+            }
+          ]
+        },
+        {
+          "name": "Angular Services",
+          "questions": [
+            {
+              "question": "What is an Angular service?",
+              "options": [
+                { "label": "A", "text": "A class that performs a specific task, typically for sharing data between components" },
+                { "label": "B", "text": "A directive that handles DOM manipulation" },
+                { "label": "C", "text": "A template file for displaying UI" },
+                { "label": "D", "text": "A lifecycle hook that runs after the component is destroyed" }
+              ],
+              "correctOption": "A"
+            },
+            {
+              "question": "How are services injected into Angular components?",
+              "options": [
+                { "label": "A", "text": "Using the constructor of the component" },
+                { "label": "B", "text": "Using ngOnInit" },
+                { "label": "C", "text": "Using a template reference variable" },
+                { "label": "D", "text": "Using Angular modules" }
+              ],
+              "correctOption": "A"
+            }
+          ]
+        },
+        {
+          "name": "Angular Forms",
+          "questions": [
+            {
+              "question": "What is the purpose of reactive forms in Angular?",
+              "options": [
+                { "label": "A", "text": "To provide a template-driven approach for handling forms" },
+                { "label": "B", "text": "To provide a model-driven approach for handling forms" },
+                { "label": "C", "text": "To create forms without any validations" },
+                { "label": "D", "text": "To handle form data submission" }
+              ],
+              "correctOption": "B"
+            },
+            {
+              "question": "Which directive is used for form validation?",
+              "options": [
+                { "label": "A", "text": "ngFor" },
+                { "label": "B", "text": "ngModel" },
+                { "label": "C", "text": "ngForm" },
+                { "label": "D", "text": "ngControl" }
+              ],
+              "correctOption": "C"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Advanced Angular",
+      "imageUrl": "assets/images/angulara.png",
+      "topics": [
+        {
+          "name": "Routing in Angular",
+          "questions": [
+            {
+              "question": "What is Angular routing?",
+              "options": [
+                { "label": "A", "text": "A way to navigate between different pages or views" },
+                { "label": "B", "text": "A technique for handling form validation" },
+                { "label": "C", "text": "A method for sending HTTP requests" },
+                { "label": "D", "text": "A way to define components" }
+              ],
+              "correctOption": "A"
+            },
+            {
+              "question": "Which module is needed for routing?",
+              "options": [
+                { "label": "A", "text": "HttpClientModule" },
+                { "label": "B", "text": "FormsModule" },
+                { "label": "C", "text": "RouterModule" },
+                { "label": "D", "text": "ReactiveFormsModule" }
+              ],
+              "correctOption": "C"
+            }
+          ]
+        },
+        {
+          "name": "State Management",
+          "questions": [
+            {
+              "question": "What is the purpose of state management in Angular?",
+              "options": [
+                { "label": "A", "text": "To store and manage application data in a central place" },
+                { "label": "B", "text": "To handle component lifecycle hooks" },
+                { "label": "C", "text": "To manage HTTP requests" },
+                { "label": "D", "text": "To define component structures" }
+              ],
+              "correctOption": "A"
+            },
+            {
+              "question": "Which library is commonly used for state management in Angular?",
+              "options": [
+                { "label": "A", "text": "RxJS" },
+                { "label": "B", "text": "NgRx" },
+                { "label": "C", "text": "Formly" },
+                { "label": "D", "text": "Bootstrap" }
+              ],
+              "correctOption": "B"
+            }
+          ]
+        },
+        {
+          "name": "Lazy Loading",
+          "questions": [
+            {
+              "question": "What is lazy loading in Angular?",
+              "options": [
+                { "label": "A", "text": "A technique to load components asynchronously" },
+                { "label": "B", "text": "A method for optimizing form validations" },
+                { "label": "C", "text": "A way to load data synchronously" },
+                { "label": "D", "text": "A technique to handle errors" }
+              ],
+              "correctOption": "A"
+            },
+            {
+              "question": "Why is lazy loading beneficial?",
+              "options": [
+                { "label": "A", "text": "It reduces the initial load time of an application" },
+                { "label": "B", "text": "It improves data binding" },
+                { "label": "C", "text": "It speeds up form submission" },
+                { "label": "D", "text": "It simplifies component lifecycle management" }
+              ],
+              "correctOption": "A"
+            }
+          ]
+        },
+        {
+          "name": "Angular Universal",
+          "questions": [
+            {
+              "question": "What is Angular Universal?",
+              "options": [
+                { "label": "A", "text": "A library for server-side rendering" },
+                { "label": "B", "text": "A form validation library" },
+                { "label": "C", "text": "A routing module" },
+                { "label": "D", "text": "A CSS framework for Angular" }
+              ],
+              "correctOption": "A"
+            },
+            {
+              "question": "Why would you use Angular Universal?",
+              "options": [
+                { "label": "A", "text": "To improve SEO and performance" },
+                { "label": "B", "text": "To create forms more easily" },
+                { "label": "C", "text": "To reduce bundle size" },
+                { "label": "D", "text": "To simplify route handling" }
+              ],
+              "correctOption": "A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Angular Testing",
+      "imageUrl": "assets/images/testa.png",
+      "topics": [
+        {
+          "name": "Unit Testing in Angular",
+          "questions": [
+            {
+              "question": "What is the purpose of unit testing in Angular?",
+              "options": [
+                { "label": "A", "text": "To test individual pieces of code in isolation" },
+                { "label": "B", "text": "To test the entire application as a whole" },
+                { "label": "C", "text": "To test user interface interactions" },
+                { "label": "D", "text": "To test component lifecycle hooks" }
+              ],
+              "correctOption": "A"
+            },
+            {
+              "question": "Which framework is commonly used for unit testing in Angular?",
+              "options": [
+                { "label": "A", "text": "Mocha" },
+                { "label": "B", "text": "Jasmine" },
+                { "label": "C", "text": "Chai" },
+                { "label": "D", "text": "Jest" }
+              ],
+              "correctOption": "B"
+            }
+          ]
+        },
+        {
+          "name": "End-to-End Testing",
+          "questions": [
+            {
+              "question": "What is end-to-end testing in Angular?",
+              "options": [
+                { "label": "A", "text": "Testing an application's entire workflow from start to finish" },
+                { "label": "B", "text": "Testing individual components in isolation" },
+                { "label": "C", "text": "Testing only form validation" },
+                { "label": "D", "text": "Testing the routing module" }
+              ],
+              "correctOption": "A"
+            },
+            {
+              "question": "Which tool is typically used for end-to-end testing in Angular?",
+              "options": [
+                { "label": "A", "text": "Karma" },
+                { "label": "B", "text": "Protractor" },
+                { "label": "C", "text": "Mocha" },
+                { "label": "D", "text": "Chai" }
+              ],
+              "correctOption": "B"
+            }
+          ]
+        },
+        {
+          "name": "Mocking Services",
+          "questions": [
+            {
+              "question": "What is the purpose of mocking services in unit tests?",
+              "options": [
+                { "label": "A", "text": "To test real API interactions" },
+                { "label": "B", "text": "To simulate external dependencies" },
+                { "label": "C", "text": "To handle routing in tests" },
+                { "label": "D", "text": "To test template rendering" }
+              ],
+              "correctOption": "B"
+            },
+            {
+              "question": "Which library can be used for mocking services in Angular tests?",
+              "options": [
+                { "label": "A", "text": "HttpClient" },
+                { "label": "B", "text": "MockBackend" },
+                { "label": "C", "text": "NgMock" },
+                { "label": "D", "text": "RxMock" }
+              ],
+              "correctOption": "B"
+            }
+          ]
+        },
+        {
+          "name": "Testing Directives",
+          "questions": [
+            {
+              "question": "How do you test an Angular directive?",
+              "options": [
+                { "label": "A", "text": "By creating a test component that uses the directive" },
+                { "label": "B", "text": "By directly instantiating the directive" },
+                { "label": "C", "text": "By injecting the directive into the main app module" },
+                { "label": "D", "text": "By mocking the directive in a service" }
+              ],
+              "correctOption": "A"
+            },
+            {
+              "question": "What is an important consideration when testing structural directives?",
+              "options": [
+                { "label": "A", "text": "Ensuring the template changes based on the directive's condition" },
+                { "label": "B", "text": "Ensuring it handles form validation" },
+                { "label": "C", "text": "Ensuring it modifies routing behavior" },
+                { "label": "D", "text": "Ensuring it interacts with the service layer" }
+              ],
+              "correctOption": "A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+<div class="flex flex-col min-h-screen bg-gray-900 text-white">
+  <main class="flex-grow pt-0 pb-20">
+    <section class="mb-4">
+      <div class="bg-blue-700 rounded-lg shadow-md p-4 text-center">
+        <img [src]="course.imageUrl" alt="Card Image" class="w-full h-48 object-cover rounded-t-lg">
+        <h2 class="text-lg font-semibold text-white mt-2">{{ course?.name }}</h2>
+      </div>
+    </section>
+
+    <section class="p-4">
+      <h3 class="text-lg font-semibold mb-4">Topics</h3>
+      <div class="flex flex-col">
+        <div class="flex items-center space-x-4 mb-8" *ngFor="let topic of topics; let i = index">
+          <div class="flex flex-col items-center">
+            <div class="flex items-center justify-center w-8 h-8 border rounded-full bg-gray-900 z-20"
+                 [ngClass]="{'border-blue-600 dark:border-blue-500 text-blue-600 dark:text-blue-500': !topic.locked && i <= progress.topicIndex, 'border-gray-500 dark:border-gray-400 text-gray-500 dark:text-gray-400': topic.locked || i > progress.topicIndex}">
+              {{ i + 1 }}
+            </div>
+            <div *ngIf="i < topics.length - 1" class="flex-grow w-0.5 bg-gray-500" [ngClass]="{'bg-blue-600': !topic.locked && i < progress.topicIndex, 'bg-gray-500': topic.locked || i >= progress.topicIndex}"></div>
+          </div>
+          <div class="flex-grow bg-gray-800 rounded-lg p-4 flex items-center justify-between"
+               [ngClass]="{'cursor-pointer': !topic.locked, 'cursor-not-allowed opacity-50': topic.locked}"
+               (click)="navigateToQuiz(i)">
+            <div class="flex items-center space-x-4">
+              <div class="bg-blue-700 p-2 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold">{{ topic.name }}</h4>
+                <button *ngIf="!topic.locked && i === progress.topicIndex && (progress.questionIndex > 0 || i === 0)"
+                        class="bg-blue-500 text-white px-4 py-1 rounded mt-2">Continue</button>
+              </div>
+            </div>
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>      
+    </section>
+  </main>
+
+</div>

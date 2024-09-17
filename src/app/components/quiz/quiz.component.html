@@ -1,0 +1,49 @@
+<div class="flex flex-col min-h-screen bg-gray-900 text-white">
+  <div class="flex items-center mb-4">
+    <button (click)="closeQuiz()" class="text-white">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <div class="flex-grow mx-4">
+      <div class="h-2 bg-gray-600 rounded-full">
+        <div class="h-2 bg-blue-500 rounded-full" [style.width.%]="(currentQuestionIndex / topic.questions.length) * 100"></div>
+      </div>
+    </div>
+
+    <div class="text-white">
+      Time Left: {{ formattedTime }}
+    </div>
+    
+  </div>
+
+  <div class="mb-4">
+    <h2 class="text-lg font-semibold mb-2">{{ currentQuestion?.question }}</h2>
+    <p class="text-sm text-gray-400 mb-2">Multiple choice</p>
+
+    <div class="space-y-2">
+      <div 
+        *ngFor="let option of currentQuestion?.options" 
+        class="bg-gray-800 p-4 rounded-lg flex items-center justify-between"
+        [ngClass]="{
+          'bg-green-500': selectedOption === option && option.label === currentQuestion.correctOption,
+          'bg-red-500': selectedOption === option && option.label !== currentQuestion.correctOption,
+          'bg-gray-800': selectedOption !== option
+        }" 
+        (click)="selectOption(option)"
+      >
+        <div class="flex items-center space-x-4">
+          <div class="bg-gray-600 text-white rounded-full w-8 h-8 flex items-center justify-center">
+            {{ option.label }}
+          </div>
+          <p class="text-sm">{{ option.text }}</p>
+        </div>
+        <div *ngIf="selectedOption === option" class="bg-blue-500 rounded-full w-4 h-4 flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

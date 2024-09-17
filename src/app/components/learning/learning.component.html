@@ -1,0 +1,18 @@
+<div class="flex flex-col min-h-screen bg-gray-900 text-white">
+    <header class="bg-blue-500 text-white p-4 fixed top-0 w-full z-10">
+      <h1 class="text-xl">Learning</h1>
+    </header>
+  
+    <main class="flex-grow p-4 pt-20 pb-20">
+      <section class="mb-4">
+        <div *ngFor="let course of courses; let i = index" 
+             class="bg-blue-700 rounded-lg shadow-md p-4 text-center card mb-4" 
+             (click)="navigateToDetails(i)">
+          <img [src]="course.imageUrl" alt="Card Image" class="w-full h-48 object-cover rounded-t-lg">
+          <h2 class="text-lg font-semibold text-white mt-2">{{ course.name }}</h2>
+        </div>
+      </section>
+    </main>
+
+  </div>
+  

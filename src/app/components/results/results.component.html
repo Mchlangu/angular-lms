@@ -1,0 +1,18 @@
+<div class="flex flex-col min-h-screen bg-gray-900 text-white">
+    <header class="flex items-center p-4 bg-gray-800">
+      <h1 class="text-xl">Quiz Results</h1>
+    </header>
+  
+    <main class="flex-grow p-4 flex flex-col items-center justify-center">
+      <section class="mb-4">
+        <div class="bg-green-700 rounded-lg shadow-md p-4 text-center">
+          <h2 class="text-lg font-semibold text-white">Congratulations!</h2>
+          <p class="text-white mt-2">You scored {{ score }} points.</p>
+        </div>
+      </section>
+      <button class="bg-blue-500 text-white px-4 py-2 rounded mt-4" (click)="navigateToLearning()">Back to Learning</button>
+      <button *ngIf="hasNextTopic" class="bg-blue-500 text-white px-4 py-2 rounded mt-4" (click)="navigateToNextTopic()">Next Topic</button>
+      <button class="bg-yellow-500 text-white px-4 py-2 rounded mt-4" (click)="reAttemptQuiz()">Re-attempt Quiz</button>
+    </main>
+  </div>
+  
